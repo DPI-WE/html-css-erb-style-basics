@@ -59,10 +59,7 @@ In HTML5, self-closing tags like <br>, <img>, and <input> do not require a closi
 </div>
 ```
 
-- **File and Folder Names**: Use lowercase letters and separate words with hyphens for HTML files and folders. This convention is widely accepted and makes URLs easier to read and type.
-Example: `index.html`, `contact-us.html`, `css/`, `images/`.
-
-<!--  -->
+- **File and Folder Names**: Use lowercase letters and separate words with hyphens for HTML files and folders. This convention is widely accepted and makes URLs easier to read and type. Examples: `index.html`, `contact-us.html`, `css/`, `images/`.
 
 - What is the correct indentation for HTML?
 - 1 space
@@ -83,10 +80,6 @@ CSS (Cascading Style Sheets) controls the presentation of your web pages. Follow
 - **Properties**: Use a colon followed by a space before the value. Each property should be on its own line, ending with a semicolon.
 - **Indentation**: Use 2 spaces for indentation within rule sets.
 
-<!-- TODO: inline styles should be avoided -->
-
-<!-- TODO: BEM block element modifier -->
-
 ```css
 body {
   font-family: Arial, sans-serif;
@@ -100,10 +93,27 @@ h3 {
 }
 ```
 
+### Avoid Inline Styles
+Avoid using inline styles (styles defined directly in the HTML elements using the style attribute) as they make your HTML hard to maintain and can override your external CSS. Always keep your CSS in separate files for better maintainability and reusability.
+
+```html
+<!-- Avoid this: -->
+<p style="color: red;">This is a paragraph.</p>
+
+<!-- Use this instead: -->
+<p class="text-red">This is a paragraph.</p>
+```
+
+```css
+/* with this style rule */
+.text-red {
+  color: red;
+}
+```
+
 ### Casing
-- **Class Names**: Use `kebab-case` (lowercase letters, separated by hyphens) for class names.
-- **IDs**: Also use `kebab-case` for IDs, though their use should be minimized to maintain specificity simplicity.
-- **Files**: Use lowercase letters and hyphens for CSS file names. For example, `styles.css`, `main-styles.css`.
+- **Class Names and IDs**: Use `kebab-case` (lowercase letters, separated by hyphens) for class names and IDs.
+- **Files and Folder Names**: Use lowercase letters and hyphens for CSS file names. Examples: `styles.css`, `main-styles.css`.
 
 ```css
 .button-primary {
@@ -113,12 +123,12 @@ h3 {
 ```
 
 - What is the correct naming convention for CSS class names?
-- camelCase
-  - Not quite. camelCase is commonly used in JavaScript.
-- snake_case
-  - Not quite. snake_case is often used in Ruby.
-- kebab-case
-  - Correct! CSS class names should use kebab-case.
+- `camelCase`
+  - Not quite. `camelCase` is commonly used in JavaScript.
+- `snake_case`
+  - Not quite. `snake_case` is often used in Ruby.
+- `kebab-case`
+  - Correct! CSS class names should use `kebab-case`.
 {: .choose_best #css_naming title="CSS Naming Conventions" points="1" answer="3" }
 
 ## ERB Style Basics
@@ -128,7 +138,7 @@ Embedded Ruby (ERB) allows you to embed Ruby code within HTML. Proper use of ERB
 
 ### Syntax and Spacing
 - **ERB Tags**: Use `<%= %>` for Ruby expressions that return a value and `<% %>` for expressions that do not return a value.
-- **Spacing**: Include a space inside the ERB tags for readability. eg `<% good %>` and `<%bad%>`
+- **Spacing**: Include a space inside the ERB tags for readability. Examples: `<% good %>` and `<%bad%>`
 
 ```erb
 <%= @user.name %>
@@ -139,7 +149,7 @@ Embedded Ruby (ERB) allows you to embed Ruby code within HTML. Proper use of ERB
 ```
 
 ### Casing
-- **File and Folder Naming**: ERB files should use `snake_case`, similar to Ruby files, with a .html.erb extension. For example, `user_profile.html.erb`, `index.html.erb`.
+- **File and Folder Naming**: ERB files should use `snake_case`, similar to Ruby files, with a `.html.erb` extension. Examples: `user_profile.html.erb`, `index.html.erb`.
 
 ### Logic and Presentation Separation
 Keep Ruby logic out of your views as much as possible. Use helper methods in your Sinatra app to maintain separation of concerns.
@@ -180,18 +190,17 @@ Ensure that you have the appropriate formatter installed for HTML and CSS. Prett
 npm install -g prettier
 ```
 
-### Use Format Document
+#### Use Format Document
 To format your HTML or CSS files manually:
 
-#### 1. Open the file you want to format in VSCode.
+##### 1. Open the file you want to format in VSCode.
 
-#### 2. Format Document:
-
+##### 2. Format Document:
 - Right-click anywhere in the editor and select Format Document from the context menu.
 - Use the keyboard shortcut Shift + Alt + F (Windows) or Shift + Option + F (Mac) to format the document.
 - Search "Format Document" from the command palette CTRL + Shift + P (Windows) or Command + Shift + P (Mac).
 
-#### 3. VSCode will automatically format the document based on the settings you've configured.
+##### 3. VSCode will automatically format the document based on the settings you've configured.
 
 - Which command in VSCode formats the entire document?
 - Ctrl + S
