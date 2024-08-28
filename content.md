@@ -83,6 +83,10 @@ CSS (Cascading Style Sheets) controls the presentation of your web pages. Follow
 - **Properties**: Use a colon followed by a space before the value. Each property should be on its own line, ending with a semicolon.
 - **Indentation**: Use 2 spaces for indentation within rule sets.
 
+<!-- TODO: inline styles should be avoided -->
+
+<!-- TODO: BEM block element modifier -->
+
 ```css
 body {
   font-family: Arial, sans-serif;
@@ -96,21 +100,10 @@ h3 {
 }
 ```
 
-### Naming Conventions
-- **Class Names**: Use kebab-case (lowercase letters, separated by hyphens) for class names.
-- **IDs**: Also use kebab-case for IDs, though their use should be minimized to maintain specificity simplicity.
-
-```css
-.button-primary {
-  background-color: #007bff;
-  color: #fff;
-}
-```
-
 ### Casing
-CSS follows similar casing conventions to HTML to maintain consistency:
-
-- **Class Names and IDs**: Use kebab-case for naming, just like in HTML.
+- **Class Names**: Use `kebab-case` (lowercase letters, separated by hyphens) for class names.
+- **IDs**: Also use `kebab-case` for IDs, though their use should be minimized to maintain specificity simplicity.
+- **Files**: Use lowercase letters and hyphens for CSS file names. For example, `styles.css`, `main-styles.css`.
 
 ```css
 .button-primary {
@@ -118,8 +111,6 @@ CSS follows similar casing conventions to HTML to maintain consistency:
   color: #fff;
 }
 ```
-
-- **File Naming**: Use lowercase letters and hyphens for CSS file names. For example, `styles.css`, `main-styles.css`.
 
 - What is the correct naming convention for CSS class names?
 - camelCase
@@ -127,7 +118,8 @@ CSS follows similar casing conventions to HTML to maintain consistency:
 - snake_case
   - Not quite. snake_case is often used in Ruby.
 - kebab-case
-  - Correct! CSS class names should use kebab-case. {: .choose_best #css_naming title="CSS Naming Conventions" points="1" answer="3" }
+  - Correct! CSS class names should use kebab-case.
+{: .choose_best #css_naming title="CSS Naming Conventions" points="1" answer="3" }
 
 ## ERB Style Basics
 
@@ -135,8 +127,8 @@ CSS follows similar casing conventions to HTML to maintain consistency:
 Embedded Ruby (ERB) allows you to embed Ruby code within HTML. Proper use of ERB is essential for clean and maintainable Sinatra applications.
 
 ### Syntax and Spacing
-- **ERB Tags**: Use <%= %> for Ruby expressions that return a value and <% %> for expressions that do not return a value.
-- **Spacing**: Include a space inside the ERB tags for readability.
+- **ERB Tags**: Use `<%= %>` for Ruby expressions that return a value and `<% %>` for expressions that do not return a value.
+- **Spacing**: Include a space inside the ERB tags for readability. eg `<% good %>` and `<%bad%>`
 
 ```erb
 <%= @user.name %>
@@ -167,18 +159,20 @@ end
 ```
 
 - Which ERB tag is used for Ruby expressions that do not return a value?
-- <%= %>
-  - Not quite. <%= %> is used for expressions that return a value.
-- <% %>
-  - Correct! <% %> is used for Ruby code that does not output a value.
-- <%== %>
-  - Not quite. <%== %> is not a standard ERB tag. {: .choose_best #erb_syntax title="ERB Tag Usage" points="1" answer="2" }
+- `<%= %>`
+  - Not quite. `<%= %>` is used for expressions that return a value.
+- `<% %>`
+  - Correct! `<% %>` is used for Ruby code that does not output a value.
+- `<%== %>`
+  - Not quite. `<%== %>` is not a standard ERB tag.
+{: .choose_best #erb_syntax title="ERB Tag Usage" points="1" answer="2" }
 
 ## Using Format Document in VSCode
 VSCode's "Format Document" feature is a powerful tool that automatically formats your code according to the style guidelines of the language you're working with.
 
 ### Step-by-Step: Using Format Document
-Set Up Formatting for HTML and CSS
+
+#### Set Up Formatting for HTML and CSS
 Ensure that you have the appropriate formatter installed for HTML and CSS. Prettier is a popular choice for formatting web languages.
 
 ```bash
@@ -216,6 +210,8 @@ Consistency in your coding style makes your code easier to read and maintain. Wh
 - **Stick to the style guide**: Following a consistent style guide is crucial.
 - **Use tools to automate**: Use formatters like "Format Document" in VSCode to automatically enforce your style guide.
 - **Review and Refactor**: Regularly review your code and refactor it to meet the style guidelines.
+
+<!--  -->
 
 - Why is consistency in coding style important?
 - It makes the code prettier.
