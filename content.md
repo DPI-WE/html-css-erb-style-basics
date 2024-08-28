@@ -43,14 +43,14 @@ HTML is the backbone of web pages. Following consistent conventions helps make y
 ```
 
 ### Self-Closing Tags
-In HTML5, self-closing tags like <br>, <img>, and <input> do not require a closing slash.
+In HTML5, self-closing tags like `<br>`, `<img>`, and `<input>` do not require a closing slash.
 
 ```html
 <img src="image.png" alt="Sample Image">
 ```
 
 ### Casing
-- **Classes and IDs**: Use `kebab-case`, where words are lowercase and separated by hyphens.
+- **Classes and IDs**: Use `kebab-case`, where words are lowercase and separated by hyphens. Example:
 
 ```html
 <div>
