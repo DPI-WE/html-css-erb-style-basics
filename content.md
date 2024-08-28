@@ -61,6 +61,8 @@ In HTML5, self-closing tags like `<br>`, `<img>`, and `<input>` do not require a
 
 - **File and Folder Names**: Use lowercase letters and separate words with hyphens for HTML files and folders. This convention is widely accepted and makes URLs easier to read and type. Examples: `index.html`, `contact-us.html`, `css/`, `images/`.
 
+<!--  -->
+
 - What is the correct indentation for HTML?
 - 1 space
   - Not quite. HTML requires more space for proper indentation.
