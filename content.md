@@ -180,18 +180,25 @@ end
 ## Using Format Document in VSCode
 VSCode's "Format Document" feature is a powerful tool that automatically formats your code according to the style guidelines of the language you're working with.
 
-### Step-by-Step: Using Format Document
+### Set Up Formatting for HTML and ERB
+Ensure that you have the appropriate formatter installed for HTML and ERB. For ERB, the [htmlbeautifier gem](https://github.com/threedaymonk/htmlbeautifier) and the [ERB Formatter/Beautify VSCode extension](https://marketplace.visualstudio.com/items?itemName=aliariff.vscode-erb-beautify) are popular choices.
 
-#### Set Up Formatting for HTML and CSS
-Ensure that you have the appropriate formatter installed for HTML and CSS. Prettier is a popular choice for formatting web languages.
+#### Install htmlbeautifier
+To install htmlbeautifier, run the following command in your terminal:
 
 ```bash
-# Install Prettier globally
-npm install -g prettier
+gem install htmlbeautifier
 ```
 
+#### Install ERB Formatter/Beautify VSCode Extension
+To install the ERB Formatter/Beautify extension:
+
+##### Open VSCode.
+- Go to the Extensions view by clicking on the square icon in the sidebar or pressing Ctrl + Shift + X (Windows/Linux) or Cmd + Shift + X (Mac).
+- Search for "ERB Formatter/Beautify" and click Install.
+
 #### Use Format Document
-To format your HTML or CSS files manually:
+To format your html.erb files manually:
 
 ##### 1. Open the file you want to format in VSCode.
 
